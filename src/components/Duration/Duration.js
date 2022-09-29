@@ -22,9 +22,11 @@ const Duration = ({cart}) => {
         button.style.borderRadius="20px";
         button.style.padding="5px";
        const getTimeString = button.innerText;
+       localStorage.setItem("breakTime", getTimeString);
        const getBreakTime = parseInt(getTimeString);
        const newCount = breakTime + getBreakTime;
         setBreakTime(newCount)
+        
     }
 
     return (
@@ -75,7 +77,7 @@ const Duration = ({cart}) => {
 
             <div className='flex justify-evenly'>
                 <p>Break Time</p>
-                <p> {breakTime} Seconds</p>
+                <p> {localStorage.getItem("breakTime") ? localStorage.getItem("breakTime") : "20"} <span></span> Seconds</p>
             </div>
          </div>
 

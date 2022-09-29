@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import Card from "../Card/Card"
+import Duration from '../Duration/Duration';
 
 import "./Home.css";
 
@@ -45,7 +46,8 @@ const Home = () => {
 
                 <div className="duration">
                   
-                    {/* <Duration cart={cart}></Duration> */}
+                   
+                    <Duration></Duration>
                 </div>
 
              </div>

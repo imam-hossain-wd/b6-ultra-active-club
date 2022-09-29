@@ -1,5 +1,6 @@
 import './App.css';
 import Collapse from './components/Collapse/Collapse';
+import Footer from './components/Footer/Footer';
 import Home from './components/home/Home';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 
      <Home></Home>
      <Collapse></Collapse>
+     <Footer></Footer>
   
       
      

@@ -5,7 +5,9 @@ import 'react-toastify/dist/ReactToastify.css';
 const Duration = ({cart}) => {
  const [breakTime , setBreakTime] = useState(0);
 
- const notify = () => toast("Congratulation ! I have done your Activity");
+ const notify = () => toast("Congratulation ! you have done your Activity",{
+    position:"top-center"
+ });
 
 
     let exerciseTime = 0;

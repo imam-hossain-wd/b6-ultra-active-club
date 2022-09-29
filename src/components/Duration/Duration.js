@@ -1,7 +1,11 @@
 import React ,{useState} from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Duration = ({cart}) => {
  const [breakTime , setBreakTime] = useState(0);
+
+ const notify = () => toast("Congratulation ! I have done your Activity");
 
 
     let exerciseTime = 0;
@@ -50,7 +54,7 @@ const Duration = ({cart}) => {
 
             <div className='flex justify-evenly bg-slate-400 text-black py-6 rounded-xl'>
                 
-         <button onClick={buttonHandler} >10<span>s</span> </button> 
+         <button onClick={buttonHandler} >10<span className='select-none'>s</span> </button> 
          <button onClick={buttonHandler} >20<span>s</span> </button>
          <button onClick={buttonHandler} >30<span>s</span> </button>
          <button onClick={buttonHandler} >40<span>s</span> </button>
@@ -73,7 +77,13 @@ const Duration = ({cart}) => {
             </div>
          </div>
 
-            <button className="btn btn-secondary mt-5 w-full">Activity Comlete</button>
+            {/* <button className="btn btn-secondary mt-5 w-full">Activity Comlete</button> */}
+
+        <div>
+        <button onClick={notify} className="btn btn-secondary mt-5 w-full">Activity Complete</button>
+        <ToastContainer />
+      </div>
+
 
 
         </div>

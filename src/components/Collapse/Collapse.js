@@ -39,7 +39,7 @@ const Collapse = () => {
                 How many works useEfeect without dataload from api
             </div>
             <div className="collapse-content"> 
-                <p>tabIndex={1} attribute is necessary to make the div focusable</p>
+            <p>useEffect() is a React Hook which allows us to handle side effects in our functional React components. we can use it to do anything that doesn’t directly impact our UI/ JSX code.It allows us to register a function which executes AFTER the current render cycle.It runs after every render cycle unless we pass a second argument to an array of dependencies of the effect.</p>
             </div>
            
          </div>

@@ -7,12 +7,12 @@ const Card = (props) => {
         <div>
 
     <div className="card bg-base-100 shadow-xl">
-        <img className='h-56 ' src="" alt="Shoes" />
+        <img className='h-56 ' src={img} alt="Shoes" />
     <div className="card-body">
-        <h2 className="card-title"> </h2>
-        <p>Time: Mins</p>
-        <p>Rep: </p>
-        <p>Set: </p>
+        <h2 className="card-title">{name}</h2>
+        <p>Time: {time} Mins</p>
+        <p>Rep: {rep}</p>
+        <p>Set: {set}</p>
         <button onClick={()=> props.AddToList(props.workout)} className="btn btn-primary w-full">Add to List</button>
     </div>
     </div>

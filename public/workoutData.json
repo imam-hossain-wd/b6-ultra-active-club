@@ -1,0 +1,54 @@
+[
+  {
+    "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    "img": "https://img.freepik.com/free-photo/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-his-upper-body-concept-healthy-lifestyle-sport-fitness-bodybuilding-wellbeing_155003-27879.jpg?w=2000",
+    "time": "25",
+    "name" :"Squats",
+    "rep" : "10 reps",
+    "set" : "4 sets"
+
+  },
+  {
+    "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+    "img": "https://phantom-marca.unidadeditorial.es/a8b1ad2a2c60a849445ef998400d97a7/crop/0x0/659x371/resize/1320/f/jpg/assets/multimedia/imagenes/2022/01/29/16434557776404.jpg",
+    "time": "50",
+    "name" :"Push-ups",
+    "rep" : "30 reps",
+    "set" : "4 sets"
+  },
+  {
+    "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+    "img": "https://t4.ftcdn.net/jpg/03/45/30/91/360_F_345309108_JcuvEw7WiBGh6BaXRm1DfSSu7tLWUy0e.jpg",
+    "time": "60",
+    "name" :"Dips",
+    "rep" : "15 reps",
+    "set" : "4 sets"
+ 
+  },
+  {
+    "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
+    "img": "https://i.ytimg.com/vi/gey73xiS8F4/maxresdefault.jpg",
+    "time": "55",
+    "name" :"Lat pull-down",
+    "rep" : "15 reps",
+    "set" : "4 sets"
+  },
+  {
+    "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
+    "img": "https://www.mensjournal.com/wp-content/uploads/mf/the_15_most_important_exercises_for_men_main.jpg?quality=70&strip=all",
+    "time": "40",
+    "name" :"Deadlift",
+    "rep" : "20 reps",
+    "set" : "4 sets"
+ 
+  },
+  {
+    "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
+    "img": "https://worthstart.com/wp-content/uploads/2019/11/gym-names-idea-main-feature-image.jpg",
+    "time": "50",
+    "name" :"Hammer curls",
+    "rep" : "20 reps",
+    "set" : "4 sets"
+  }
+   
+]

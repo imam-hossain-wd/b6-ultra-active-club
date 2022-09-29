@@ -35,8 +35,6 @@ const Home = () => {
                 workout={workout}
                 AddToList={AddToList}
                 key={workout.id}
-                
-                
                 ></Card>)
               }
 
@@ -47,7 +45,7 @@ const Home = () => {
                 <div className="duration">
                   
                    
-                    <Duration></Duration>
+                <Duration cart={cart}></Duration>
                 </div>
 
              </div>

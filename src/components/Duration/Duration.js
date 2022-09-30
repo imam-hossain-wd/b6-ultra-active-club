@@ -2,6 +2,9 @@
 import React, {useState} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+
 
 
 let getItem = localStorage.getItem('break-time');
@@ -51,10 +54,15 @@ const Duration = ({cart}) => {
 
     return (
         <div className='sm: flex flex-col justify-center items-center'>
-            <div className='bg-green-700 rounded  p-5 w-full'>
-            <div className='bg-pink-500 p-2 rounded-xl mt-3 mb-3'>
+            <div style={{backgroundColor:'#222f3e'}} className='bg-green-700 rounded-2xl text-white p-5 w-full'>
+            <div className='bg-pink-500 p-2 rounded-xl mt-3 mb-3 flex justify-around'>
+                <div>
+                <img className='rounded-full w-32 h-32' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGlB8FzzL5xfVfJG3oFNfl27WKuZqH5hTBeDSh7pGt&s" alt="" />
+                </div>
+                <div className='text-lg'>
                 <h1 >Imam Hossain</h1>
-                <p> Chittagong Bangladesh</p>
+                <p> <FontAwesomeIcon icon={faLocationDot} /> Chittagong Bangladesh</p>
+                </div>
                 
             </div>
 

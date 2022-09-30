@@ -1,12 +1,14 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
     return (
         <div>
-              <div className="navbar bg-indigo-600 flex justify-around text-white">
+ <div style={{backgroundColor:'#54a0ff'}} className="navbar  flex justify-around text-white">
 
 <div>
-    <h1 className='text-4xl font-semi-bold '>E-Max Fitness Care</h1>
+    <h1 className='text-4xl font-semi-bold'> <FontAwesomeIcon icon={faDumbbell} />  E-Max Fitness Care</h1>
 </div>
 <div className="flex-none">
 <ul className="menu menu-horizontal p-0">

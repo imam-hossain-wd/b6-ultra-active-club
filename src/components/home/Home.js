@@ -1,6 +1,8 @@
 import React, { useEffect, useState }  from 'react';
-import Card from "../Card/Card"
+import Card from "../Card/Card";
 import Duration from '../Duration/Duration';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPersonWalking } from "@fortawesome/free-solid-svg-icons";
 
 
 import "./Home.css";
@@ -28,7 +30,8 @@ const Home = () => {
             
            
 
-            <h4 className='text-2xl text-center text-teal-400 mt-5'>Select today’s exercise</h4>
+            <h4 className='text-2xl  text-teal-400 mt-5 ml-10 text-blue-600'> <FontAwesomeIcon icon={faPersonWalking} /> Select Today’s Exercise</h4>
+            
 
             <div className="lg:flex justify-between">
 

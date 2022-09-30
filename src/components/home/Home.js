@@ -2,6 +2,7 @@ import React, { useEffect, useState }  from 'react';
 import Card from "../Card/Card"
 import Duration from '../Duration/Duration';
 
+
 import "./Home.css";
 
 const Home = () => {
@@ -23,7 +24,10 @@ const Home = () => {
     return (
         <div>
            
-            <h1 className='text-4xl text-center text-teal-400 mt-5'>E-Max Fitness</h1>
+      
+            
+           
+
             <h4 className='text-2xl text-center text-teal-400 mt-5'>Select today’s exercise</h4>
 
             <div className="lg:flex justify-between">

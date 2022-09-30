@@ -1,9 +1,17 @@
-import React ,{useState} from 'react';
+
+import React, {useState} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+let getItem = localStorage.getItem('break-time');
+    if(!getItem){
+        getItem = "00";
+ }
+
 const Duration = ({cart}) => {
- const [breakTime , setBreakTime] = useState(0);
+    const [breakTime , setBreakTime] = useState(`${getItem.slice(0,2)}`);
+
 
  const notify = () => toast("Congratulation ! you have done your Activity",{
     position:"top-center"
@@ -12,22 +20,34 @@ const Duration = ({cart}) => {
 
     let exerciseTime = 0;
     for (const singleCart of cart){
-        exerciseTime = parseInt(exerciseTime) + parseInt(singleCart.time);      
+        exerciseTime = parseInt(exerciseTime) + parseInt(singleCart.time); 
+       localStorage.setItem("exerciseTime", exerciseTime);  
+       
+    }
+
+    const getExerciseTime = () => {
+        const exerciseTime = localStorage.getItem("exerciseTime") ? localStorage.getItem("exerciseTime") : "00";  
+        return exerciseTime;
     }
    
-
     const buttonHandler = (e)=>{
         const button = e.target;
         button.style.backgroundColor="#341f97";
         button.style.borderRadius="20px";
         button.style.padding="5px";
        const getTimeString = button.innerText;
-       localStorage.setItem("breakTime", getTimeString);
-       const getBreakTime = parseInt(getTimeString);
-       const newCount = breakTime + getBreakTime;
-        setBreakTime(newCount)
-        
+        localStorage.setItem('break-time', getTimeString);
+        const getTimeFromDB = (localStorage.getItem('break-time'))
+        let  newTime;
+        if(getTimeFromDB){
+          newTime= getTimeFromDB.split('').slice(0,2).join('')
+        }
+        setBreakTime(newTime)   
     }
+
+    
+
+   
 
     return (
         <div className='sm: flex flex-col justify-center items-center'>
@@ -35,6 +55,7 @@ const Duration = ({cart}) => {
             <div className='bg-pink-500 p-2 rounded-xl mt-3 mb-3'>
                 <h1 >Imam Hossain</h1>
                 <p> Chittagong Bangladesh</p>
+                
             </div>
 
            
@@ -58,11 +79,11 @@ const Duration = ({cart}) => {
 
             <div className='flex justify-evenly bg-slate-400 text-black py-6 rounded-xl'>
                 
-         <button onClick={buttonHandler} >10<span className='select-none'>s</span> </button> 
-         <button onClick={buttonHandler} >20<span>s</span> </button>
-         <button onClick={buttonHandler} >30<span>s</span> </button>
-         <button onClick={buttonHandler} >40<span>s</span> </button>
-         <button onClick={buttonHandler} >50<span>s</span> </button>
+            <button onClick={buttonHandler} >10s</button> 
+            <button onClick={buttonHandler} >20s</button>
+            <button onClick={buttonHandler} >30s</button>
+            <button onClick={buttonHandler} >40s</button>
+            <button onClick={buttonHandler} >50s</button>
 
        </div>
 
@@ -72,16 +93,20 @@ const Duration = ({cart}) => {
          <div className='bg-sky-400 text-black p-5 rounded-xl'>
             <div className='flex justify-evenly'>
                 <p>Exercise Time</p>
-                <span> {exerciseTime} Mins</span>
+                <p>{getExerciseTime()}</p>
+                
             </div>
 
             <div className='flex justify-evenly'>
-                <p>Break Time</p>
-                <p> {localStorage.getItem("breakTime") ? localStorage.getItem("breakTime") : "20"} <span></span> Seconds</p>
+                <p>Break Time :</p>
+                <p>{breakTime}</p>
+                
+
+                
+                
             </div>
          </div>
 
-            {/* <button className="btn btn-secondary mt-5 w-full">Activity Comlete</button> */}
 
         <div>
         <button onClick={notify} className="btn btn-secondary mt-5 w-full">Activity Complete</button>

@@ -14,6 +14,7 @@ let getItem = localStorage.getItem('break-time');
 
 const Duration = ({cart}) => {
     const [breakTime , setBreakTime] = useState(`${getItem.slice(0,2)}`);
+    
 
 
  const notify = () => toast("Congratulation ! you have done your Activity",{
@@ -31,6 +32,7 @@ const Duration = ({cart}) => {
     const getExerciseTime = () => {
         const exerciseTime = localStorage.getItem("exerciseTime") ? localStorage.getItem("exerciseTime") : "00";  
         return exerciseTime;
+        
     }
    
     const buttonHandler = (e)=>{
@@ -102,6 +104,7 @@ const Duration = ({cart}) => {
             <div className='flex justify-evenly'>
                 <p>Exercise Time</p>
                 <p>{getExerciseTime()}</p>
+                
                 
             </div>
 
